@@ -43,6 +43,41 @@ fn sample_var3() {
     println!("{}", greeting);
 }
 
+// function
+
+#[allow(dead_code)]
+fn add_i32(a: i32, b: i32) -> i32 {
+    a + b
+}
+
+#[allow(dead_code)]
+fn sample_func1() {
+    let a: i32 = 100;
+    let b: i32 = 500;
+
+    let c = add_i32(a, b);
+    println!("a + b = {}", c);
+}
+
+// if
+
+#[allow(dead_code)]
+fn sample_if_2() {
+    let a = 10;
+
+    let result = if a > 10 {
+        "greater than 10"
+    } else if a == 10 {
+        "equal"
+    } else {
+        "rather than 10"
+    };
+
+    println!("result : {}", result);
+}
+
+// loop
+
 #[allow(dead_code)]
 fn sample_loop1() {
     let mut i = 0;
@@ -84,21 +119,6 @@ fn sample_loop3() {
 }
 
 #[allow(dead_code)]
-fn sample_if_2() {
-    let a = 10;
-
-    let result = if a > 10 {
-        "greater than 10"
-    } else if a == 10 {
-        "equal"
-    } else {
-        "rather than 10"
-    };
-
-    println!("result : {}", result);
-}
-
-#[allow(dead_code)]
 fn sample_for_1() {
     let array = [1, 2, 3, 4, 5];
 
@@ -122,14 +142,6 @@ fn sample_match_1() {
         100 => println!("one hundred"),
         _ => println!("something"),
     }
-
-    let result = match value {
-        1 => "one",
-        10 => "ten",
-        100 => "one hundred",
-        _ => "something",
-    };
-    println!("result: {}", result);
 }
 
 #[allow(dead_code)]
